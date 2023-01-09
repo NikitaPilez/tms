@@ -37,6 +37,15 @@
 //$firstString .= " it's me";
 //print_r($firstString);
 
+//$a = 12;
+//$b = 5;
+//$result = $a % $b;
+//
+//var_dump($result);
+
+//$array = ['dfg'];
+//var_dump(isset($array));
+
 //$a = 14;
 //$b = 4;
 //
@@ -66,3 +75,45 @@
 //if ($a || $b) {
 //    print_r('We are here');
 //}
+//
+//$isCell = 10 % 5;
+//
+//$isCell == 0 ? print_r('Целочисленное деление') : print_r('Нецелочисленное');
+//
+
+//$isBool = true;
+//$number = 0;
+//
+//if ($isBool != $number) {
+//    print_r('Не равно');
+//}
+//
+//$number = $argv[1];
+//
+//if ($number < 13 && $number > 0) {
+//    if ($number < 3 || $number == 12) {
+//        print_r('Зима');
+//    } elseif ($number > 2 && $number < 6) {
+//        print_r('Весна');
+//    } elseif ($number > 5 && $number < 9) {
+//        print_r('Лето');
+//    } else {
+//        print_r('Осень');
+//    }
+//} else {
+//    print_r('Некорректный ввод!');
+//}
+
+//$a = 11;
+//$b = 5;
+//$result = $a % $b;
+//
+//$number = 10;
+
+//$number = 3;
+//print_r($number .   ' sdf');
+
+//$myString = "Я вам скажу так: \"I'll be back\"";
+//
+//print_r($myString);
+
