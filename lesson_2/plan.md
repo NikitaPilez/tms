@@ -1,3 +1,4 @@
+## Фидбек по домашнему заданию, разобраться чтоб php запускался в консоли
 ### Типы данных: null, bool, int, string, float, array, object.
 ### Приведение типов: в строку, в целое, в бул.
 ### Функции is_string() is_int() is_numeric() is_bool() is_array()
