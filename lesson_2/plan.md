@@ -14,3 +14,6 @@
 ### https://www.php.net/manual/ru/control-structures.if.php
 ### https://www.php.net/manual/ru/control-structures.else.php
 ### https://www.php.net/manual/ru/control-structures.elseif.php
+### Тернарный оператор
+### https://www.php.net/manual/ru/language.operators.comparison.php#language.operators.comparison.ternary
+### https://php720.com/lesson/19
