@@ -1,11 +1,17 @@
 <?php
 
-// Определить какой день недели был в введеную дату
+// Определить смогу ли я пойти на достопримечательность в ОАЭ если я улетел туда в отпуске с 10 января по 20 января, дата достопримечательности 15 января
 
-$days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+$fromDate = "10.01.2023";
+$tillDate = "20.01.2023";
+$day = "15.01.2023";
 
-$inputDate = $argv[1];
+$unixFromDate = strtotime($fromDate);
+$unixTillDate = strtotime($tillDate);
+$unixDay = strtotime($day);
 
-$numberDay = date('w', strtotime($inputDate));
-
-print_r($days[$numberDay]);
+if ($unixDay > $unixFromDate && $unixDay < $unixTillDate) {
+    print_r("Получается сходить");
+} else {
+    print_r("Не получается сходить");
+}
