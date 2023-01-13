@@ -1,0 +1,9 @@
+Введение в массивы: порядок элементов, длина массива, изменение элементов, ключи из переменных
+Ассоциативные массивы
+Многомерные массивы
+Функции для работы с массивами
+
+основы работы с массивами https://www.php.net/manual/ru/language.types.array.php (1)
+сортировка массива https://www.php.net/manual/ru/array.sorting.php (2)
+функции для работы с массивами array_chunk() array_diff() https://www.php.net/manual/ru/ref.array.php (3)
+
