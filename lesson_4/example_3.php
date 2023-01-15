@@ -3,6 +3,8 @@
 $firstArray = ['Nikita', 'Alesya', 'Sergey'];
 //print_r(array_chunk($firstArray, 2));
 
+//print_r(count($firstArray));
+
 $secondArray = ['Nikita', 'Pavel', 'Aleksey'];
 
 $result = array_diff($firstArray, $secondArray);
@@ -55,3 +57,28 @@ $resultArray = array_merge($firstArray, $secondArray);
 $fruitsArray = ["orange", "banana"];
 array_push($fruitsArray, "apple", "raspberry");
 //print_r($fruitsArray);
+
+$firstArray = ['bmw', 'mercedes', 'audi', 'porsche'];
+$key = array_search('bmw', $firstArray);
+
+//print_r($key);
+
+$names = [
+    'user_1' => 'Nik',
+    'user_2' => 'Alex',
+    'user_3' => 'Nik',
+    'user_4' => 'Milana'
+];
+
+$result = array_unique($names);
+//print_r($result);
+
+$array = ["audi", "bmw", "mercedes", "porsche", "toyota"];
+
+$result = array_slice($array, 2);
+$result = array_slice($array, -2, 1);
+$result = array_slice($array, 0, 3);
+
+//print_r($result);
+
+//print_r(in_array('audi', $array));
