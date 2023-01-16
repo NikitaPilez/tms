@@ -14,17 +14,21 @@ function showWorkTime(string $date, string $time)
     $hours = date('G', $timestampTime);
 
     if ($dayInWeek == 0 || $dayInWeek == 6) {
-        print_r('Сегодня магазин выходной');
+        print_r('Сегодня выходной');
     } else if ($hours < 9) {
         $dateTime = strtotime($date . ' ' . $time);
         $openTime = strtotime($date . ' ' . '09:00');
-        $openTimeInMinutes = ($openTime - $dateTime) / 60;
+        $openTimeInMinutes = ($openTime - $dateTime) / 3660;
         print_r('Магазин еще не открылся, откроется через ' . $openTimeInMinutes);
     } else if ($hours >= 21) {
         $dateTime = strtotime($date . ' ' . $time);
         $midnightTime = strtotime($date . ' ' . '24:00');
         $openTimeInMinutes = ($midnightTime - $dateTime + (60 * 60 * 9)) / 60;
-        print_r('Магазин уже закрылся, откроется через ' . $openTimeInMinutes);
+        if ($dayInWeek == 5) {
+            print_r('Магазин уже закрылся и откроется в понедельник в 09.00');
+        } else {
+            print_r('Магазин уже закрылся, откроется через ' . $openTimeInMinutes);
+        }
     } else {
         $dateTime = strtotime($date . ' ' . $time);
         $closeTime = strtotime($date . ' ' . '21:00');

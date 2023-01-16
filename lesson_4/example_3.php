@@ -82,3 +82,12 @@ $result = array_slice($array, 0, 3);
 //print_r($result);
 
 //print_r(in_array('audi', $array));
+
+$array = [
+    'teachers' => 'Teachers',
+    'personal_account' => 'My account',
+    'contact_us' => 'Contact us'
+];
+
+//print_r(array_values($array));
+
