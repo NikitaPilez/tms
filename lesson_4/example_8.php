@@ -39,3 +39,6 @@ $result = implode(':', [10, 12, 13, 20]);
 $result = explode(',', "огурец,колбаса,тесто,лук");
 //print_r($result);
 
+$email = 'test@gmail.com';
+//print_r(strstr($email, '@', true));
+

@@ -1,9 +1,9 @@
 <?php
 
-$fileName = 'test.svg';
-$allowedFormats = ['.svg', '.jpeg', '.jpg', '.svg'];
+$fileName = 'test.jpg';
+$allowedFormats = ['svg', 'jpeg', 'jpg', 'svg'];
 $explodeString = explode('.', $fileName);
-$format = '.' . $explodeString[1];
+$format = $explodeString[1];
 
 if (in_array($format, $allowedFormats)) {
     print_r('Формат валидный');
