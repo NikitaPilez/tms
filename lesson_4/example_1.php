@@ -13,5 +13,7 @@
 
 // добавление в массив через [], ['test'], unset()
 
-// преобразование в массив
+$thirdExample['test_key'] = 'example';
+$thirdExample[] = 'example_1';
+unset($thirdExample[1]);
 
