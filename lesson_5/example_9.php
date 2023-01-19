@@ -15,3 +15,4 @@ foreach ($arraySymbols as $symbol) {
 
 print_r('Count - ' . $count);
 
+

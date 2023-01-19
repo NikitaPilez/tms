@@ -20,11 +20,11 @@ function generatePassword(int $length = 10, $shouldContainsCapitalSymbol = false
     }
 
     if ($shouldContainsSpecialSymbol) {
-        $randomString .= $specialSymbolArray[rand(1, count($specialSymbolArray))];
+        $randomString .= $specialSymbolArray[rand(1, count($specialSymbolArray) - 1)];
     }
 
     if ($shouldContainsCapitalSymbol) {
-        $randomString .= strtoupper($charactersArray[rand(1, count($charactersArray))]);
+        $randomString .= strtoupper($charactersArray[rand(10, count($charactersArray) - 1)]);
     }
 
     return str_shuffle($randomString);
