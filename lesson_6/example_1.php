@@ -2,6 +2,7 @@
 // preg_match() - проверка на соответствие регулярному выражению.
 // preg_match_all() - глобальный поиск шаблона в строке
 
+// [] - один из этих символов, () - группировка
 $string = 'Hello world!';
 $result = preg_match('/[A-Za-z]/', $string);
 //print_r($result);
