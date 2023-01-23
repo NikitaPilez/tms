@@ -1,7 +1,7 @@
 <?php
 
 $string = 'sdff34swewf345345fgg4';
-preg_replace('/\d/', ' ', $string);
+$string = preg_replace('/\d/', ' ', $string);
 //print_r($string);
 
 $birthdays = [
