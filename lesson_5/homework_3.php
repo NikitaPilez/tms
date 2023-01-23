@@ -27,7 +27,7 @@ foreach ($users as &$user) {
     $diffUpdatedPass = time() - strtotime($user['updated_password_at']);
     $diffUpdatedPassInDay = $diffUpdatedPass / (60 * 60 * 24);
     if ($diffUpdatedPassInDay > 90) {
-        $user['password'] = 'new_password';
+        $user['password'] = 'new_password'; // generate in next task
     }
 }
 

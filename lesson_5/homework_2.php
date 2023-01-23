@@ -38,3 +38,13 @@ $departments = [
         ]
     ],
 ];
+
+$averageSalaries = [];
+
+foreach ($departments as $nameDepartments => $descriptions) {
+    $averageSalaries[$nameDepartments] = array_sum(array_map(function ($sum) {
+        return $sum['salary'];
+    }, $descriptions)) / count($descriptions);
+}
+
+print_r($averageSalaries);
