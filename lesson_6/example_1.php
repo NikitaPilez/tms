@@ -8,6 +8,7 @@ $result = preg_match('/[A-Za-z]/', $string);
 //print_r($result);
 
 // i - после закрывающегося ограничителя шаблона это регистронезависимый поиск.
+// u - корректная работа с utf 8.
 
 $string = 'Minsk - is the capital of Belarus';
 $result = preg_match('/minsk/i', $string);

@@ -1,35 +1,6 @@
 <?php
 
-// поиск автомобильного номера Беларуси
-// случай если 0000
-
-$numbers = [
-    'BY1645AB-1',
-    'E002AA-5',
-    '4KKBY4325'
-];
-
-$byRegex = '/BY[0-9]{4}[A-Za-z]{2}-[0-7]/i';
-$electricRegex = '/E[0-9]{3}[A-Za-z]{2}-[0-7]/i';
-$transitRegex = '/[0-9][A-Za-z]{2}BY[0-9]{4}/i';
-foreach ($numbers as $number) {
-    $isByNumber = preg_match($byRegex, $number);
-    $isElectricNumber = preg_match($electricRegex, $number);
-    $isTransitNumber = preg_match($transitRegex, $number);
-    if ($isTransitNumber || $isByNumber || $isElectricNumber) {
-        print_r('Work ' . $number . PHP_EOL);
-    }
-}
-//
-//$byNumbers = [
-//    'BY1645AB-1',
-//    'RU3434AB-3',
-//    'BY34345AB-34',
-//    'BY34556A34'
-//];
-//
-//foreach ($byNumbers as $number) {
-//    if (preg_match($byRegex, $number)) {
-//        print_r('WORK!');
-//    }
-//}
+//$url = 'https://www.21vek.by/tables/?filter%5Bgood_status%5D%5B%5D=in&filter%5Bproducer%5D%5B%5D=bon_mebel&filter%5Bsa%5D=';
+$url = 'https://cars.av.by/filter?brands[0][brand]=683&brands[0][model]=5884&brands[0][generation]=4560&transmission_type=1&body_type[0]=5';
+$str = preg_replace('/^(.+?)(\?.*?)?(#.*)?$/', '$1$3', $url);
+print_r($str . PHP_EOL);

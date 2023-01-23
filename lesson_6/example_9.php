@@ -1,5 +1,6 @@
 <?php
 
 // найти повторяющиеся символы
-$string = 'ff';
-if (preg_match("/(.)\\1\\1/", $string)) echo "yes"; else echo "no";
+$string = 'ff kkk hello spagetti';
+preg_match_all("/(.)\\1/", $string, $matches); // \1 повторить группу 1, но ее нужно экранировать
+print_r($matches);
