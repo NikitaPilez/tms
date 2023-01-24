@@ -5,12 +5,16 @@
 ### Загрузка одного файла (3)
 ### Загрузка нескольких файлов (4)
 ### Задание, написать обменник валют (5)
+### Задание, сделать форму регистрации, применить знания по регуляркам (6)
 
 ## Полезные ссылки
 [Суперглобальные переменные](https://www.php.net/manual/ru/language.variables.superglobals.php)
 [Загрузка на сервер файла](https://www.php.net/manual/ru/features.file-upload.post-method.php)
 [Полезные ссылки](https://wm-school.ru/php/php_forms.php)
 [Полезные ссылки](https://wm-school.ru/html/html_forms.html)
+
+##### Запуск сервера php -S localhost:8000 -t ~/Projects/tms/lesson_7
+
 
 Понятие запрос - ответ, клиент - сервер
 Структура HTTP протокола: заголовок, тело, форматы передачи данных
