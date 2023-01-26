@@ -9,9 +9,9 @@ $numbers = [
     '4KK4325'
 ];
 
-$byRegex = '/[0-9]{4}[A-Za-z]{2}-[0-7]/i';
-$electricRegex = '/E[0-9]{3}[A-Za-z]{2}-[0-7]/i';
-$transitRegex = '/[0-9][A-Za-z]{2}[0-9]{4}/i';
+$byRegex = '/^[0-9]{4}[A-Za-z]{2}-[0-7]$/i';
+$electricRegex = '/^E[0-9]{3}[A-Za-z]{2}-[0-7]$/i';
+$transitRegex = '/^[0-9][A-Za-z]{2}[0-9]{4}$/i';
 foreach ($numbers as $number) {
     $isByNumber = preg_match($byRegex, $number);
     $isElectricNumber = preg_match($electricRegex, $number);
