@@ -7,9 +7,16 @@
 ### Задание, написать обменник валют (5)
 ### Задание, реализовать загрузку файла на сервер, если не валидный формат - вывести информацию (6)
 
+### HTTP протокол
+### Задание, сделать текст тем цветом что ты выбрал. (7)
+### Задание, определить сколько дней до выбранной даты (8)
+### Задание, расчет времени поездки (9)
+### Задание, сделать конвертер расстояния (10)
+
 ## Домашнее задание
 ### Задание, сделать форму регистрации, применить знания по регуляркам, поля: номер телефона, email, password, выдать ответ успешно зарегистрирован или ошибки в формах
-### Задание, сделать платформу, где вводишь номер авто который хочешь приобрести, а она выдает ответ номер занят такой или нет
+### Задание, сделать форму загрузки файла в галерею, текстовое поле с названием файла, и поле для прикрепления файла. поле с названием файла обязательное.
+### Задание, сделать конвертер 
 
 ## Полезные ссылки
 [Суперглобальные переменные](https://www.php.net/manual/ru/language.variables.superglobals.php)
@@ -17,14 +24,11 @@
 [Полезные ссылки](https://wm-school.ru/php/php_forms.php)
 [Полезные ссылки](https://wm-school.ru/html/html_forms.html)
 [Синтаксис HTML в PHP](https://ru.hexlet.io/courses/php-mvc/lessons/php-html/theory_unit)
+[Клиент серверная архитектура](https://developer.mozilla.org/ru/docs/Learn/Server-side/First_steps/Client-Server_overview)
+[HTTP Сообщения](https://developer.mozilla.org/ru/docs/Web/HTTP/Overview#http_%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F)
+[Заголовки](https://developer.mozilla.org/ru/docs/Web/HTTP/Headers)
+[Content type](https://developer.mozilla.org/ru/docs/Web/HTTP/Methods/POST)
 
 ##### Запуск сервера php -S localhost:8000 -t ~/Projects/tms/lesson_7
 
-5-80
-
-Понятие запрос - ответ, клиент - сервер
-Структура HTTP протокола: заголовок, тело, форматы передачи данных
-Работа с HTTP протоколом в контексте языка PHP. Функция header
-
-GET и POST запросы
 Тип содержимого - form-data, multipart/form-data, application/x-www-form-urlencoded
