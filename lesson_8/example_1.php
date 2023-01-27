@@ -16,3 +16,4 @@ if (!$_SESSION['lang']) {
 print_r($_SESSION['lang']);
 
 //unset($_SESSION['lang']);
+session_destroy();
