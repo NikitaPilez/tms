@@ -8,7 +8,7 @@ $action = $_POST['action'];
 $result = match($action) {
     'addition' => $secondVariable + $firstVariable,
     'subtraction' => $secondVariable - $firstVariable,
-    'multiple' => $secondVariable * $firstVariable,
+    'multiplication' => $secondVariable * $firstVariable,
     'division' => $secondVariable / $firstVariable,
     default => 'Not found action'
 };
