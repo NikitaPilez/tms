@@ -38,7 +38,7 @@ $fromValue = $_POST['fromValue'];
 $toValue = $_POST['toValue'];
 
 $countMeter = $value / $distances[$fromValue]['value'];
-$answer = number_format($distances[$toValue]['value'] * $countMeter, 2) . ' ' . $distances[$toValue]['code'];
+$answer = number_format($distances[$toValue]['value'] * $countMeter, 2) . ' example_10.php' . $distances[$toValue]['code'];
 
 ?>
 
