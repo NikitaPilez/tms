@@ -4,7 +4,7 @@ $date = $_POST['date'];
 $time = $_POST['time'];
 
 $timeInSeconds = strtotime($date . ' ' . $time);
-$diff = number_format(ceil(($timeInSeconds - time()) / 60 / 60 / 24), 2);
+$diff = ceil(($timeInSeconds - time()) / 60 / 60 / 24);
 ?>
 
 <!doctype html>
