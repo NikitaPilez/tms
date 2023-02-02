@@ -10,4 +10,5 @@ $magic = new Magic();
 //$magic->get;
 //$magic->set = 'Set';
 //isset($magic->test);
-unset($magic->unset);
+//unset($magic->unset);
+var_dump($magic);

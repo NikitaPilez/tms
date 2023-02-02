@@ -63,4 +63,16 @@ class Magic
     {
         $this->prop = $prop;
     }
+
+    public function __toString(): string
+    {
+        return 'Magic' . $this->prop;
+    }
+
+    public function __debugInfo(): ?array
+    {
+        return [
+            'prop' => 2
+        ];
+    }
 }
