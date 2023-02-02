@@ -7,16 +7,13 @@ class Weather
 
     private string $date;
 
-    private string $comment;
-
     private int $temperature;
 
     private bool $isRainy;
 
-    public function __construct(string $date, string $comment, int $temperature, bool $isRainy)
+    public function __construct(string $date, int $temperature, bool $isRainy)
     {
         $this->date = $date;
-        $this->comment = $comment;
         $this->temperature = $temperature;
         $this->isRainy = $isRainy;
     }
@@ -52,6 +49,6 @@ class Weather
     }
 }
 
-$firstSeptember = new Weather("01-09-2023", "День знаний", 20, true);
-//$firstSeptember->setIsRainy(false);
+$firstSeptember = new Weather("01-09-2022",  20, true);
+$firstSeptember->setIsRainy(false);
 print_r($firstSeptember->getInformation());

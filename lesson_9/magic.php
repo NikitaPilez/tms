@@ -12,5 +12,6 @@ $magic = new Magic();
 //isset($magic->test);
 //unset($magic->unset);
 //var_dump($magic);
-
-print_r(serialize($magic));
+//echo $magic;
+$string = "O:14:\"lesson_9\Magic\":1:{s:4:\"prop\";s:9:\"This prop\";}";
+print_r(unserialize($string));

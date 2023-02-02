@@ -5,7 +5,7 @@ namespace lesson_9;
 class Magic
 {
 
-    public $prop;
+    private $prop;
 
     public function __construct()
     {
