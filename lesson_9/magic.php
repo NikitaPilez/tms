@@ -11,4 +11,6 @@ $magic = new Magic();
 //$magic->set = 'Set';
 //isset($magic->test);
 //unset($magic->unset);
-var_dump($magic);
+//var_dump($magic);
+
+print_r(serialize($magic));

@@ -75,4 +75,11 @@ class Magic
             'prop' => 2
         ];
     }
+
+    public function __serialize(): array
+    {
+        return [
+            'prop' => 'This prop'
+        ];
+    }
 }
