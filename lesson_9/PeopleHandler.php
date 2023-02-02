@@ -18,6 +18,7 @@ class PeopleHandler
      */
     public function getList(): array
     {
+        $this->peoples = [];
         $data = array_map('str_getcsv', file($this->fileName));
 
         foreach ($data as $people) {
@@ -73,8 +74,47 @@ class PeopleHandler
         return null;
     }
 
-    public function update()
+    public function update(int $id, string $name = null, string $phone = null, string $email = null, string $address = null, string $country = null, string $state = null)
     {
+        $people = $this->get($id);
+        if ($people) {
+            if ($name) {
+                $people->setName($name);
+            }
+            if ($phone) {
+                $people->setPhone($phone);
+            }
+            if ($email) {
+                $people->setEmail($email);
+            }
+            if ($address) {
+                $people->setAddress($address);
+            }
+            if ($country) {
+                $people->setCountry($country);
+            }
+            if ($state) {
+                $people->setState($state);
+            }
 
+            $peoples = $this->getList();
+            $this->peoples = [];
+            $string = "";
+            foreach ($peoples as $item) {
+                if ($item->getId() == $id) {
+                    print_r('if');
+                    $this->peoples[] = $people;
+                    $string .= $people->getId() . "," . $people->getName() . "," . $people->getPhone() . "," . $people->getEmail() . "," . $people->getAddress() . "," . $people->getCountry() . "," . $people->getState() . PHP_EOL;
+                } else {
+                    print_r('else');
+                    $string .= $item->getId() . "," . $item->getName() . "," . $item->getPhone() . "," . $item->getEmail() . "," . $item->getAddress() . "," . $item->getCountry() . "," . $item->getState() . PHP_EOL;
+                    $this->peoples[] = $item;
+                }
+            }
+
+            file_put_contents($this->fileName, $string);
+        }
+
+        return $people;
     }
 }
