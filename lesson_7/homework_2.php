@@ -6,7 +6,7 @@ $isValidNameField = preg_match($regex, $name);
 $isValidFileField = preg_match($regex, $_FILES['file']['name']);
 
 if ($isValidFileField && $isValidNameField) {
-    $filename = __DIR__ . 'homework_2.php/' . $name;
+    $filename = __DIR__ . '/' . $name;
     move_uploaded_file($_FILES['file']['tmp_name'], $filename);
 } else {
     print_r('Error');

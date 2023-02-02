@@ -5,8 +5,8 @@ use lesson_9\PeopleHandler;
 require_once ("../People.php");
 require_once ("../PeopleHandler.php");
 
-$peopleHandler = new PeopleHandler();
-$peoplesInformation = $peopleHandler->getPeoplesFromFile('../peoples.csv');
+$peopleHandler = new PeopleHandler('../peoples.csv');
+$peoplesInformation = $peopleHandler->getList();
 ?>
 
 <!doctype html>
@@ -34,6 +34,7 @@ $peoplesInformation = $peopleHandler->getPeoplesFromFile('../peoples.csv');
 						<table class="table table-bordered table-dark table-hover">
 						  <thead>
 						    <tr>
+						      <th>ID</th>
 						      <th>Name</th>
 						      <th>Phone</th>
 						      <th>Email</th>
@@ -46,7 +47,8 @@ $peoplesInformation = $peopleHandler->getPeoplesFromFile('../peoples.csv');
                                 <?php /** @var People $people */
                                 foreach ($peoplesInformation as $people) : ?>
                                     <tr>
-                                        <th scope="row"><?= $people->getName() ?></th>
+                                        <th scope="row"><?= $people->getId() ?></th>
+                                        <td><?= $people->getName() ?></td>
                                         <td><?= $people->getPhone() ?></td>
                                         <td><?= $people->getEmail() ?></td>
                                         <td><?= $people->getAddress() ?></td>
