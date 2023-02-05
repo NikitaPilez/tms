@@ -7,8 +7,8 @@ class Rectangle extends Figure
         parent::__construct(firstSide: $firstSide, secondSide: $secondSide);
     }
 
-    public function getArea(): float
+    public function calculateArea(): void
     {
-        return $this->getFirstSide() * $this->getSecondSide();
+        $this->setArea($this->getFirstSide() * $this->getSecondSide());
     }
 }

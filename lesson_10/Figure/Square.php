@@ -7,8 +7,8 @@ class Square extends Figure
         parent::__construct($firstSide);
     }
 
-    public function getArea(): float
+    public function calculateArea(): void
     {
-        return pow($this->getFirstSide(), 2);
+        $this->setArea(pow($this->getFirstSide(), 2));
     }
 }

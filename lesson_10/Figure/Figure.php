@@ -6,6 +6,8 @@ class Figure
     private ?float $secondSide;
     private ?float $height;
 
+    private ?float $area;
+
     public function __construct(float $firstSide, ?float $secondSide = null, ?float $height = null)
     {
         $this->firstSide = $firstSide;
@@ -61,8 +63,16 @@ class Figure
         $this->height = $height;
     }
 
-    public function getArea(): float
+    public function getArea(): ?float
     {
-        return 0;
+        return $this->area;
+    }
+
+    /**
+     * @param float|null $area
+     */
+    public function setArea(?float $area): void
+    {
+        $this->area = $area;
     }
 }

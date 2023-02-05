@@ -7,8 +7,8 @@ class Rhombus extends Figure
         parent::__construct(firstSide: $firstSide, height: $height);
     }
 
-    public function getArea(): float
+    public function calculateArea(): void
     {
-        return $this->getHeight() * $this->getFirstSide();
+        $this->setArea($this->getHeight() * $this->getFirstSide());
     }
 }
