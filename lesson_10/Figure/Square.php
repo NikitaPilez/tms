@@ -1,6 +1,6 @@
 <?php
 
-class Square extends Figure
+class Square extends Square
 {
     public function __construct(float $firstSide)
     {

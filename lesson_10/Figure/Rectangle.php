@@ -1,6 +1,6 @@
 <?php
 
-class Rectangle extends Figure
+class Rectangle extends Square
 {
     public function __construct(float $firstSide, float $secondSide)
     {

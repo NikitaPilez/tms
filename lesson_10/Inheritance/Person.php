@@ -1,6 +1,6 @@
 <?php
 
-namespace lesson_10;
+namespace lesson_10\Inheritance;
 
 class Person
 {
