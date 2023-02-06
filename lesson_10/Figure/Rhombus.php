@@ -1,14 +1,24 @@
 <?php
 
-class Rhombus extends Figure
+class Rhombus implements Figure
 {
+    private float $firstSide;
+    private float $height;
+
     public function __construct(float $firstSide, float $height)
     {
-        parent::__construct(firstSide: $firstSide, height: $height);
+
+        $this->firstSide = $firstSide;
+        $this->height = $height;
     }
 
-    public function calculateArea(): void
+    public function calculateArea(): float
     {
-        $this->setArea($this->getHeight() * $this->getFirstSide());
+        return $this->height * $this->firstSide;
+    }
+
+    public function displayInfo(?float $area): void
+    {
+        // TODO: Implement displayInfo() method.
     }
 }

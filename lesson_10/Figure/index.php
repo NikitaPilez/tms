@@ -6,13 +6,10 @@ require_once "Rhombus.php";
 require_once "Rectangle.php";
 
 $square = new Square(2);
-$square->calculateArea();
-print_r($square->getArea());
+$area = $square->calculateArea();
 
 $rhombus = new Rhombus(5, 2);
-$rhombus->calculateArea();
-print_r($rhombus->getArea());
+$area = $rhombus->calculateArea();
 
 $rectangle = new Rectangle(5, 10);
-$rectangle->calculateArea();
-print_r($rectangle->getArea());
+$area = $rectangle->calculateArea();

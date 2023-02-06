@@ -1,14 +1,22 @@
 <?php
 
-class Square extends Figure
+class Square implements Figure
 {
+    private float $firstSide;
+
     public function __construct(float $firstSide)
     {
-        parent::__construct($firstSide);
+
+        $this->firstSide = $firstSide;
     }
 
-    public function calculateArea(): void
+    public function calculateArea(): float
     {
-        $this->setArea(pow($this->getFirstSide(), 2));
+        return pow($this->firstSide, 2);
+    }
+
+    public function displayInfo(?float $area): void
+    {
+        // TODO: Implement displayInfo() method.
     }
 }

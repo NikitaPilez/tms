@@ -1,14 +1,23 @@
 <?php
 
-class Rectangle extends Figure
+class Rectangle implements Figure
 {
+    private float $firstSide;
+    private float $secondSide;
+
     public function __construct(float $firstSide, float $secondSide)
     {
-        parent::__construct(firstSide: $firstSide, secondSide: $secondSide);
+        $this->firstSide = $firstSide;
+        $this->secondSide = $secondSide;
     }
 
-    public function calculateArea(): void
+    public function calculateArea(): float
     {
-        $this->setArea($this->getFirstSide() * $this->getSecondSide());
+        return $this->firstSide * $this->secondSide;
+    }
+
+    public function displayInfo(?float $area): void
+    {
+        // TODO: Implement displayInfo() method.
     }
 }
