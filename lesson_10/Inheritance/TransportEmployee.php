@@ -6,9 +6,9 @@ class TransportEmployee extends Employee
 {
     private string $type;
 
-    public function __construct(string $name, string $company, string $type)
+    public function __construct(string $name, int $age, string $company, string $type)
     {
-        parent::__construct($name, $company);
+        parent::__construct($name, $age, $company);
         $this->type = $type;
     }
 

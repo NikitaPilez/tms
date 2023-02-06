@@ -2,7 +2,7 @@
 
 namespace Interfaces;
 
-class Google implements Mail
+class Google implements Mail, Secure
 {
 
     public function auth()
@@ -23,5 +23,10 @@ class Google implements Mail
     public function deleteEmail()
     {
         print_r("Deleted email from servers");
+    }
+
+    public function checkFace()
+    {
+        // TODO: Implement checkFace() method.
     }
 }
