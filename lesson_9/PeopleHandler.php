@@ -102,11 +102,9 @@ class PeopleHandler
             $string = "";
             foreach ($peoples as $item) {
                 if ($item->getId() == $id) {
-                    print_r('if');
                     $this->peoples[] = $people;
                     $string .= $people->getId() . "," . $people->getName() . "," . $people->getPhone() . "," . $people->getEmail() . "," . $people->getAddress() . "," . $people->getCountry() . "," . $people->getState() . PHP_EOL;
                 } else {
-                    print_r('else');
                     $string .= $item->getId() . "," . $item->getName() . "," . $item->getPhone() . "," . $item->getEmail() . "," . $item->getAddress() . "," . $item->getCountry() . "," . $item->getState() . PHP_EOL;
                     $this->peoples[] = $item;
                 }

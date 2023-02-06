@@ -1,6 +1,6 @@
 <?php
 
-class Rhombus extends Square
+class Rhombus extends Figure
 {
     public function __construct(float $firstSide, float $height)
     {
