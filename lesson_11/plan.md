@@ -10,6 +10,7 @@
 
 ### С помощью паттерна Builder реализовать конструктор машин.
 ### С помощью Singleton реализовать config.
+### Клонирование объекта новостей
 
 ## Template https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=crud-data-table-for-database-with-modal-form
 
