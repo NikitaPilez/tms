@@ -22,6 +22,8 @@ if ($action == "delete") {
     $peopleHandler->add($people);
 } else if ($action == "update") {
     $peopleHandler->update((int)$id, $name, $phone, $email, $address);
+} else if ($action == "download") {
+    $peopleHandler->downloadFile();
 }
 
 $peoplesInformation = $peopleHandler->getList();
@@ -289,6 +291,7 @@ $peoplesInformation = $peopleHandler->getList();
                         <h2>Manage <b>Peoples</b></h2>
                     </div>
                     <div class="col-sm-6">
+                        <a href="index.php?action=download" class="btn btn-warning"><i class="material-icons">&#xE147;</i> <span>Download</span></a>
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New People</span></a>
                     </div>
                 </div>
@@ -322,16 +325,7 @@ $peoplesInformation = $peopleHandler->getList();
                 </tbody>
             </table>
             <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
+                <div class="hint-text"><?php echo count($peoplesInformation) ?> entries</div>
             </div>
         </div>
     </div>
@@ -408,27 +402,5 @@ $peoplesInformation = $peopleHandler->getList();
         </div>
     </div>
 </div>
-
-<!--<div id="deleteEmployeeModal" class="modal fade">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <form action="" method="POST">-->
-<!--                <div class="modal-header">-->
-<!--                    <h4 class="modal-title">Delete Employee</h4>-->
-<!--                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-<!--                </div>-->
-<!--                <div class="modal-body">-->
-<!--                    <p>Are you sure you want to delete these Records?</p>-->
-<!--                    <p class="text-warning"><small>This action cannot be undone.</small></p>-->
-<!--                </div>-->
-<!--                <div class="modal-footer">-->
-<!--                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">-->
-<!--                    <input type="submit" class="btn btn-danger" value="Delete">-->
-<!--                </div>-->
-<!--                <input type="hidden" name="action" value="delete">-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 </body>
 </html>

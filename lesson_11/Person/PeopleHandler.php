@@ -13,13 +13,24 @@ class PeopleHandler
         $this->fileName = $fileName;
     }
 
+    public function downloadFile()
+    {
+        header('Content-Type: text/csv');
+        header('Content-Disposition: attachment; filename=' . $this->fileName);
+        readfile($this->fileName);
+        exit;
+    }
+
     /**
      * @return People[]
      */
     public function getList(): array
     {
         $this->peoples = [];
-        $data = array_map('str_getcsv', file($this->fileName));
+        $fileInfo = file($this->fileName);
+        foreach ($fileInfo as $item) {
+            $data[] = str_getcsv($item, ";");
+        }
 
         foreach ($data as $people) {
             /** @var People $people */
@@ -42,7 +53,7 @@ class PeopleHandler
         ];
 
         $this->peoples[] = $newPeople;
-        $string = implode(',', $newPeople) . PHP_EOL;
+        $string = implode(';', $newPeople) . PHP_EOL;
         file_put_contents($this->fileName, $string, FILE_APPEND);
     }
 
@@ -55,7 +66,7 @@ class PeopleHandler
 
         foreach ($peoplesFromFile as $people) {
             if ($people->getId() != $id) {
-                $string .= $people->getId() . "," . $people->getName() . "," . $people->getPhone() . "," . $people->getEmail() . "," . $people->getAddress() . PHP_EOL;
+                $string .= $people->getId() . ";" . $people->getName() . ";" . $people->getPhone() . ";" . $people->getEmail() . ";" . $people->getAddress() . PHP_EOL;
                 $this->peoples[] = $string;
             }
         }
@@ -98,9 +109,9 @@ class PeopleHandler
             foreach ($peoples as $item) {
                 if ($item->getId() == $id) {
                     $this->peoples[] = $people;
-                    $string .= $people->getId() . "," . $people->getName() . "," . $people->getPhone() . "," . $people->getEmail() . "," . $people->getAddress() . "," . PHP_EOL;
+                    $string .= $people->getId() . ";" . $people->getName() . ";" . $people->getPhone() . ";" . $people->getEmail() . ";" . $people->getAddress() . PHP_EOL;
                 } else {
-                    $string .= $item->getId() . "," . $item->getName() . "," . $item->getPhone() . "," . $item->getEmail() . "," . $item->getAddress() . "," . PHP_EOL;
+                    $string .= $item->getId() . ";" . $item->getName() . ";" . $item->getPhone() . ";" . $item->getEmail() . ";" . $item->getAddress() . PHP_EOL;
                     $this->peoples[] = $item;
                 }
             }
