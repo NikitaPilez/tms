@@ -12,4 +12,9 @@ class JSONWriter implements Writer
     {
         file_put_contents($fileName . ".json", $content);
     }
+
+    public function readFromFile(string $fileName)
+    {
+        return json_decode(file_get_contents($fileName . ".json"), true);
+    }
 }

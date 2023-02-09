@@ -19,13 +19,15 @@ $content = [
 ];
 
 //$writer = new JSONWriter();
+//print_r($writer->readFromFile("test"));
 //$formattedContent = $writer->generateContent($content);
 //$writer->writeToFile("test", $formattedContent);
 
 //$writer = new CSVWriter();
+//$writer->readFromFile("test");
 //$formattedContent = $writer->generateContent($content);
 //$writer->writeToFile("test", $formattedContent);
 
-$writer = new XMLWrite();
-$formattedContent = $writer->generateContent($content);
-$writer->writeToFile("text", $formattedContent);
+//$writer = new XMLWrite();
+//$formattedContent = $writer->generateContent($content);
+//$writer->writeToFile("text", $formattedContent);

@@ -48,4 +48,35 @@ class HouseBuilder implements HouseBuilderInterface
         print_r("Вы выбрали тип крыши: " . $roof . PHP_EOL);
         return $this;
     }
+
+    public function buildGarage(bool $hasGarage)
+    {
+        $this->house->hasGarage = $hasGarage;
+        print_r("Вы выбрали участок " . $hasGarage ? "с гаражом." : "без гаража" . PHP_EOL);
+        return $this;
+    }
+
+    public function buildRoom(int $roomCount)
+    {
+        if ($roomCount > 10) {
+            print_r("Слишком большое количество комнат" . PHP_EOL) ;
+        } else {
+            $this->house->roomCount = $roomCount;
+            print_r("Количество комнат " . $roomCount . PHP_EOL);
+        }
+
+        return $this;
+    }
+
+    public function buildFloor(int $floorCount)
+    {
+        if ($floorCount > 3) {
+            print_r("Слишком большое количество этажей" . PHP_EOL);
+        } else {
+            $this->house->floorCount = $floorCount;
+            print_r("Количество этажей " . $floorCount . PHP_EOL);
+        }
+
+        return $this;
+    }
 }

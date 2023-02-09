@@ -12,7 +12,7 @@ class Logger
         $this->file = fopen('log.txt', 'a+');
     }
 
-    public static function getInstance(): ?Logger
+    public static function getInstance(): Logger
     {
         if (!self::$instance) {
             self::$instance = new Logger();

@@ -14,6 +14,4 @@ $bank = $builder->setName("Alfa bank")
     ->setAddresses(["Matusevicha 29", "Prityzkogo 108"])
     ->getBank();
 
-print_r($bank);
-
 

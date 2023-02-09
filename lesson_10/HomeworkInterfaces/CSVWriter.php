@@ -17,4 +17,31 @@ class CSVWriter implements Writer
     {
         file_put_contents($fileName . ".csv", $content);
     }
+
+    public function readFromFile(string $fileName)
+    {
+        $content = file($fileName . ".csv");
+        $keys = [];
+        $data = [];
+
+        foreach ($content as $key => $item) {
+            if ($key == 0) {
+                $keys = explode("," , $item);
+            }
+        }
+
+        foreach ($content as $key => $item) {
+            if ($key >= 1) {
+                $values = explode(",", $item);
+                print_r($values);
+                $data[] = [
+                    $keys[0] => $values[0],
+                    $keys[1] => $values[1],
+                    $keys[2] => $values[2],
+                ];
+            }
+        }
+
+        return $data;
+    }
 }

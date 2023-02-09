@@ -24,7 +24,7 @@ class Singleton
     }
 
     // используем для получения экземпляра одиночки
-    public static function getInstance(): ?Singleton
+    public static function getInstance(): Singleton
     {
         $subclass = static::class;
 

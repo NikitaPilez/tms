@@ -3,16 +3,20 @@
 require_once "HouseBuilderInterface.php";
 require_once "HouseBuilder.php";
 require_once "House.php";
-require_once "HouseDirector.php";
 
-//$builder = new HouseBuilder();
+$builder = new HouseBuilder();
 
-//$house = $builder->buildArea(15)
-//    ->buildMaterial("кирпич")
-//    ->buildRoof("треугольная")
-//    ->getHouse();
+$house = $builder->buildArea(15)
+    ->buildRoom(5)
+    ->buildGarage(false)
+    ->buildFloor(2)
+    ->buildMaterial("кирпич")
+    ->buildRoof("треугольная")
+    ->getHouse();
 
-//print_r($house);
+$houseClone = clone $house;
+
+print_r($houseClone);
 
 
 

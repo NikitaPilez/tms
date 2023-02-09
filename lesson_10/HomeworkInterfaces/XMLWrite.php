@@ -14,4 +14,9 @@ class XMLWrite implements Writer
     {
         file_put_contents($fileName . ".xml", $content);
     }
+
+    public function readFromFile(string $fileName)
+    {
+        // TODO: Implement readFromFile() method.
+    }
 }

@@ -9,4 +9,10 @@ class House
 
     public string $material;
 
+    public bool $hasGarage;
+
+    public int $roomCount;
+
+    public int $floorCount;
+
 }
