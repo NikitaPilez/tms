@@ -14,7 +14,7 @@ class Article
         $this->content = $content;
         $this->publicationAt = $publicationAt;
         $this->isDraft = $isDraft;
-        $this->slug = $slug; // TODO
+        $this->slug = self::createSlug($slug);
     }
 
     /**
@@ -102,6 +102,10 @@ class Article
         $this->title = "Copy " . $this->getTitle();
         $this->isDraft = true;
         $this->publicationAt = date('Y-m-d H:i', strtotime("+1 day"));
-        $this->slug = $this->slug . "-1"; // TODO
+        $this->slug = $this->slug . "-copy";
+    }
+
+    public static function createSlug($str, $delimiter = '-'){
+        return strtolower(trim(preg_replace('/[\s-]+/', $delimiter, preg_replace('/[^A-Za-z0-9-]+/', $delimiter, preg_replace('/[&]/', 'and', preg_replace('/[\']/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $str))))), $delimiter));
     }
 }
