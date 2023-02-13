@@ -8,13 +8,13 @@ class Article
     private bool $isDraft;
     private string $slug;
 
-    public function __construct(string $title, string $content, string $publicationAt, bool $isDraft, string $slug)
+    public function __construct(string $title, string $content, string $publicationAt, bool $isDraft)
     {
         $this->title = $title;
         $this->content = $content;
         $this->publicationAt = $publicationAt;
         $this->isDraft = $isDraft;
-        $this->slug = self::createSlug($slug);
+        $this->slug = self::createSlug($title);
     }
 
     /**
@@ -105,7 +105,8 @@ class Article
         $this->slug = $this->slug . "-copy";
     }
 
-    public static function createSlug($str, $delimiter = '-'){
+    public static function createSlug($str, $delimiter = '-'): string
+    {
         return strtolower(trim(preg_replace('/[\s-]+/', $delimiter, preg_replace('/[^A-Za-z0-9-]+/', $delimiter, preg_replace('/[&]/', 'and', preg_replace('/[\']/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $str))))), $delimiter));
     }
 }
