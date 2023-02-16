@@ -20,3 +20,6 @@ SELECT DISTINCT manufacturer FROM products;
 SELECT DISTINCT manufacturer, count FROM products;
 SELECT * FROM products WHERE manufacturer IN ('Samsung', 'Apple');
 SELECT * FROM products WHERE price BETWEEN 200 AND 500;
+SELECT manufacturer, count(*) as model_count, SUN(count) as product_count FROM products WHERE price > 1 GROUP BY manufacturer HAVING COUNT(*) > 1 ORDER BY model_count DESC;
+SELECT * FROM products WHERE price = (SELECT MIN(price) FROM products);
+SELECT * FROM products WHERE price > (SELECT AVG(price) FROM products);
