@@ -17,9 +17,7 @@
 ### Сортировка данных
 
 ## Домашнее задание
-### Проектируем базу данных. (courses, partners, stories, teachers, article, students)
-
-### Первичные и вторичные ключи
+### Проектируем базу данных. (courses, partners, teachers, article, students)
 
 [Документация по БД](https://selectel.ru/blog/tutorials/how-to-create-databases-in-mysql/)
 [Документация по БД](https://www.w3schools.com/mysql/mysql_sql.asp)
