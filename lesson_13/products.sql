@@ -3,7 +3,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 CREATE TABLE `products` (
-`id` int NOT NULL,
+`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 `name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
 `manufacturer` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
 `count` int DEFAULT '0',
