@@ -4,5 +4,7 @@ require_once "Product.php";
 require_once "ProductHandler.php";
 
 $productHandler = new ProductHandler();
-$product = $productHandler->update(id: 3, name: "test1");
-print_r($product);
+$result = $productHandler->update(id: 3, name: "Work");
+$result = $productHandler->getAll();
+$result = $productHandler->find(3);
+$productHandler->delete(5);

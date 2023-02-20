@@ -1,6 +1,6 @@
 <?php
 
-$connection = new PDO("mysql:host=localhost;dbname=courses", "nik", "Qwerty123!");
+$connection = new PDO("mysql:host=localhost;dbname=courses", "root", "Qwerty123!");
 
 $sql = "CREATE TABLE `products` (
     `id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
