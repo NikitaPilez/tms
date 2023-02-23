@@ -21,5 +21,3 @@
 
 [Документация по БД](https://selectel.ru/blog/tutorials/how-to-create-databases-in-mysql/)
 [Документация по БД](https://www.w3schools.com/mysql/mysql_sql.asp)
-
-#### Crud people, Template https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=crud-data-table-for-database-with-modal-form
