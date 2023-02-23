@@ -1,8 +1,7 @@
 ### Проверка ДЗ
 ### Практика с PDO
-### Задача с поиском студентов, поиск по имени, полное совпадение или нет, поиск по региону
-
 ### PSR
+### Builder SQL
 
 [Нормализация БД](https://habr.com/ru/post/254773/)
 [Нормализация БД](https://office-menu.ru/uroki-sql/51-normalizatsiya-bazy-dannykh)

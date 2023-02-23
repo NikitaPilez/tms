@@ -74,6 +74,17 @@ class StudentHandler
         return $this->find($id);
     }
 
+    public function search(string $column, string $value, string $operator)
+    {
+        $sql = "SELECT * FROM students ";
+        if ($column && $value) {
+            $sql .= " WHERE " . $column . " " . $operator . " \"" . $value . "\"";
+        }
+
+        $result = $this->connection->query($sql);
+        return $result->fetchAll();
+    }
+
     public function download()
     {
         $students = $this->getAll();
