@@ -8,4 +8,4 @@ if ($id = $_REQUEST["id"]) {
     $studentHandler->delete($id);
 }
 
-header("Location: index.php");
+header("Location: crud.php");
