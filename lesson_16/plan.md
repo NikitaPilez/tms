@@ -8,6 +8,8 @@
 ### Laravel
 
 ## Полезные ссылки
+[Пространства имен](https://github.com/codedokode/pasta/blob/master/php/autoload.md)
+
 [MVC](https://habr.com/ru/post/150267/)
 
 [MVC](https://maxsite.org/page/model-view-controller-php)
