@@ -2,7 +2,6 @@
 ### Доработка задачи с SQL Builder
 ### Composer
 ### Автозагрузка
-
 ### Insomnia
 ### MVC
 ### Laravel

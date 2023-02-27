@@ -3,15 +3,11 @@
 namespace TMS\Lessons;
 
 use PDO;
-use TMS\Lessons\Test;
 
 require_once "../vendor/autoload.php";
 
-//$test = new Test();
-//$test->test();
 
-
-$connection = new PDO("mysql:host=localhost;dbname=courses", "nik", "Qwerty123!");
+$connection = new PDO("mysql:host=localhost;dbname=courses", "root", "Qwerty123!");
 
 $sqlBuilder = new MySQLQueryBuilder();
 $query = $sqlBuilder
