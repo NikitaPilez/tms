@@ -17,7 +17,7 @@ class StudentController extends Controller
 
     public function index()
     {
-        $students = $this->model->getData();
+        $students = $this->model->getAll();
 
         $this->view->generate("students", []);
     }
@@ -26,7 +26,8 @@ class StudentController extends Controller
     {
         print_r("Creating"); // TODO
 
-        $students = $this->model->getData();
+        $this->model->create($_POST["name"], $_POST["description"], $_POST["email"], $_POST["phone"], $_POST["country"]);
+        $students = $this->model->getAll();
 
         $this->view->generate("students", [
             "students" => $students
@@ -35,9 +36,8 @@ class StudentController extends Controller
 
     public function delete()
     {
-        print_r("Deleting"); // TODO
-
-        $students = $this->model->getData();
+        $this->model->delete($_POST["id"]);
+        $students = $this->model->getAll();
 
         $this->view->generate("students", [
             "students" => $students
